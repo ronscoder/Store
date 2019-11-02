@@ -1,0 +1,43 @@
+[02/Nov/2019 12:45:37] "GET /work/ HTTP/1.1" 200 121
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/__init__.py", line 381, in execute_from_command_line
+    utility.execute()
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/base.py", line 323, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 60, in execute
+    super().execute(*args, **options)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/base.py", line 364, in execute
+    output = self.handle(*args, **options)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 95, in handle
+    self.run(**options)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/core/management/commands/runserver.py", line 102, in run
+    autoreload.run_with_reloader(self.inner_run, **options)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 598, in run_with_reloader
+    start_django(reloader, main_func, *args, **kwargs)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 583, in start_django
+    reloader.run(django_main_thread)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 301, in run
+    self.run_loop()
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 307, in run_loop
+    next(ticker)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 347, in tick
+    for filepath, mtime in self.snapshot_files():
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 363, in snapshot_files
+    for file in self.watched_files():
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 262, in watched_files
+    yield from iter_all_python_module_files()
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 103, in iter_all_python_module_files
+    return iter_modules_and_files(modules, frozenset(_error_files))
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/django/utils/autoreload.py", line 116, in iter_modules_and_files
+    if module.__name__ == '__main__':
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/py/_apipkg.py", line 171, in __getattribute__
+    return getattr(getmod(), name)
+  File "/Users/ronsair/anaconda3/lib/python3.6/site-packages/py/_error.py", line 44, in __getattr__
+    raise AttributeError(name)
+AttributeError: __name__
